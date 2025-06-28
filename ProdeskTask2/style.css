@@ -1,0 +1,94 @@
+:root {
+  --bg: #8f9fcf;
+  --text: #000000;
+  --accent: #3e60e8;
+  --shadow: rgba(3, 20, 59, 0.39);
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --text: #ffffff;
+  --accent: #dc9e40;
+  --shadow: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Sans-serif';
+  background-color: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.app {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--bg);
+  box-shadow: 0 0 10px var(--shadow);
+  border-radius: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.search-container {
+  display: flex;
+  margin: 2rem 0;
+}
+
+#search-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid var(--text);
+  border-radius: 6px 0 0 6px;
+  font-size: 1rem;
+}
+
+#search-btn {
+  padding: 0.75rem 1rem;
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+.result h2 {
+  font-size: 3rem;
+  margin-bottom: 0.25rem;
+}
+
+.result .phonetic {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.result audio {
+  margin: 0.5rem 0;
+}
+
+.result .part-of-speech {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.result ul {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.5rem;
+}
+
+.result .synonyms {
+  margin-top: 0.5rem;
+  color: var(--accent);
+}

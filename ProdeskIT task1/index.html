@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="theme-toggle"> 
+        <div class="moon-icon">🌙</div>
+        <div class="toggle-switch" onclick="toggleTheme()"></div>
+        <div class="sun-icon">☀</div>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to the<br><span class="highlight">Frontend Quiz!</span></h1>
+            <p class="subtitle">Pick a subject to get started.</p>
+        </div>
+        
+        <div class="quiz-options">
+            <button class="quiz-button" onclick="startQuiz('html')">
+                <div class="icon html-icon"><img src="pics/html-file_8297258.png"/></div>
+                <span>HTML</span>
+            </button>
+            
+            <button class="quiz-button" onclick="startQuiz('css')">
+                <div class="icon css-icon"><img src="pics/file_16049914.png"/></div>
+                <span>CSS</span>
+            </button>
+            
+            <button class="quiz-button" onclick="startQuiz('javascript')">
+                <div class="icon js-icon"><img src="/pics/js_8945581.png"/></div>
+                <span>JavaScript</span>
+            </button>
+            
+            <button class="quiz-button" onclick="startQuiz('accessibility')">
+                <div class="icon accessibility-icon"><img src="/pics/accessibility_1512724.png"/></div>
+                <span>Accessibility</span>
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        function startQuiz(subject) {
+            const button = event.target.closest('.quiz-button');
+            button.style.transform = 'scale(0.95)';
+            
+            setTimeout(() => {
+                alert(`Starting ${subject.toUpperCase()} quiz!`);
+                button.style.transform = '';
+            }, 150);
+        }
+        
+        function toggleTheme() {
+    const body = document.body;
+    const toggle = document.querySelector('.toggle-switch');
+
+    body.classList.toggle('light-mode');
+
+    // Move the toggle circle
+    const isLight = body.classList.contains('light-mode');
+    toggle.style.background = isLight 
+        ? 'rgba(0, 0, 0, 0.1)' 
+        : 'rgba(255, 255, 255, 0.2)';
+}
+
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.quiz-button');
+            
+            buttons.forEach((button, index) => {
+                button.style.opacity = '0';
+                button.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    button.style.transition = 'all 0.6s ease';
+                    button.style.opacity = '1';
+                    button.style.transform = 'translateY(0)';
+                }, index * 100 + 200);
+            });
+        });
+    </script>
+</body>
+</html>

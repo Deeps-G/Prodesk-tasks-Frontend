@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4ff;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  /* max-width: 900px;
+  margin: 50px auto; */
+  background-color: white;
+  /* border-radius: 15px; */
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.sidebar {
+  width: 250px;
+  background: linear-gradient(to bottom, #483eff, #a17cf3);
+  color: white;
+  padding: 30px 20px;
+  border-radius: 0 20px 20px 0;
+}
+
+.steps .step {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.step.active .circle {
+  background-color: white;
+  color: #483eff;
+}
+
+.text {
+  margin-left: 15px;
+}
+
+.text p {
+  /* margin: 0; */
+margin-top: 25px;
+  font-size: 18px;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.text h4 {
+  margin: 2px 0 0;
+  font-size: 25px;
+}
+
+.form-area {
+  flex: 1;
+  padding: 10px;
+  margin-left: 90px;
+  font-size: 20px;
+}
+
+/* .form-step {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+
+} */
+ .form-step {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+  max-width: 950px;
+  margin: 0 auto; /* centers it horizontally */
+}
+
+
+.form-step.active {
+  display: block;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  max-width: 860px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 100px;
+  margin-right:60px ;
+   gap: 50px;
+   height: 40px;
+   width: 880px;
+  
+
+}
+.next{
+  font-weight: bolder;
+  font-size: medium;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #02295a;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bolder;
+   font-size: medium;
+ 
+}
+
+button:hover {
+  background-color: #164a8a;
+}
+h2 {
+  font-size: 45px;
+  margin-bottom: 5px;
+
+color: #02295a;
+;
+
+  /* text-transform: uppercase; */
+}
+h5{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: #02295a;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

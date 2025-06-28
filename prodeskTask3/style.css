@@ -1,0 +1,146 @@
+:root {
+  --bg-color: #1e1e1e;
+  --text-color: #ffffff;
+  --input-bg: #333;
+  --accent: #577266;
+  --button-bg: #f6be07;
+  --footer-color: #999;
+  --shaddow-color: rgba(175, 206, 111, 0.914);
+}
+
+.light-mode {
+  --bg-color: #fefefe;
+  --text-color: #1e1e1e;
+  --input-bg: #958e8e4a;
+  --accent: #d3dbb6;
+  --button-bg: #e7f2ec;
+  --footer-color: #444;
+}
+
+body {
+  margin: 0;
+  font-family: monospace;
+  background: var(--accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: var(--bg-color);
+  padding: 30px;
+  border-radius: 10px;
+  color: var(--text-color);
+  width: 500px;
+  height: 550px;
+  box-shadow: 0 0 20px var(--accent), 0 4px 32px var(--shaddow-color);
+  text-align: center;
+}
+.top-bar {
+  align-items: left;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+h2 {
+  /* margin: 0; */
+  font-size: 28px;
+  color: var(--text-color);
+}
+
+#theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.output-container {
+  display: flex;
+  margin: 20px 0;
+}
+
+#password {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  background: var(--input-bg);
+  color: var(--text-color);
+  border-radius: 5px 0 0 5px;
+}
+
+#copyBtn {
+  padding: 10px;
+  background: var(--button-bg);
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.settings {
+  margin-bottom: 20px;
+}
+
+.optionsNdAll {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 20px;
+}
+
+button#generate {
+  padding: 10px 20px;
+  background: var(--button-bg);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: left;
+}
+
+footer {
+  margin-top: 15px;
+  font-size: 0.8rem;
+  /* font-size: 2px; */
+  color: var(--footer-color);
+  text-align: center;
+}
+footer a {
+  color: rgb(143, 63, 105);
+  text-decoration: none;
+}
+.customize {
+  font-size: 25px;
+  font-weight: bold ;
+  text-align: left;
+}
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 20px;
+ 
+
+}
+.password-length label {
+  font-size: 30px;
+  size: 30px;
+   margin-bottom: 40px;
+  margin-top: 50px;
+}
+.password-length input {
+  margin-top: 8px;
+  padding: 5px;
+  width: 60px;
+ 
+}
+
+

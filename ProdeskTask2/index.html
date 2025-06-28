@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dictionary App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Dictionary</h1>
+      <div class="controls">
+        <select id="font-select">
+          <option value="serif">Serif</option>
+          <option value="sans-serif" selected>Sans</option>
+          <option value="monospace">Mono</option>
+        </select>
+        <label class="theme-toggle">
+          <input type="checkbox" id="theme-switch" />
+          <span>🌙</span>
+        </label>
+      </div>
+    </header>
+
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search a word..." />
+      <button id="search-btn">🔍</button>
+    </div>
+
+    <div class="result" id="result-container"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
