@@ -1,16 +1,16 @@
 let boards = {
   "Platform Launch": {
-    todo: ["Build UI", "Test flows", "Javascript"],
-    doing: ["Authentication"],
-    done: ["Wireframe"]
+    todo: [""],
+    doing: [""],
+    done: [""]
   },
   "Marketing Plan": {
-    todo: ["Market research"],
+    todo: [""],
     doing: [],
     done: []
   },
   "Roadmap": {
-    todo: ["Plan Q4"],
+    todo: [""],
     doing: [],
     done: []
   }
