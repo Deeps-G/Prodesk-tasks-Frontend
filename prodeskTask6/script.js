@@ -123,23 +123,61 @@ function showInput(column) {
   inputDiv.appendChild(cancelBtn);
 }
 
+function renderSidebarBoards() {
+  const boardList = document.getElementById("boardList");
+  boardList.innerHTML = "";
+
+  for (const name in boards) {
+    const li = document.createElement("li");
+    li.textContent = name;
+    li.className = "board";
+    if (name === currentBoard) li.classList.add("active");
+
+    li.onclick = (event) => switchBoard(name, event);
+    boardList.appendChild(li);
+  }
+}
+
 function switchBoard(boardName, event) {
   currentBoard = boardName;
-  document.querySelectorAll(".board").forEach(el => el.classList.remove("active"));
-  event.target.classList.add("active");
+  renderSidebarBoards();
   renderBoard();
 }
+
 
 function toggleMode() {
   document.body.classList.toggle("light");
   document.body.classList.toggle("dark");
   localStorage.setItem("kanbanTheme", document.body.classList.contains("light") ? "light" : "dark");
 }
+function showBoardInput() {
+  document.getElementById("boardInputBox").style.display = "block";
+  document.getElementById("newBoardName").focus();
+}
+
+function cancelBoard() {
+  document.getElementById("boardInputBox").style.display = "none";
+  document.getElementById("newBoardName").value = "";
+}
+
+function createBoard() {
+  const name = document.getElementById("newBoardName").value.trim();
+  if (name && !boards[name]) {
+    boards[name] = { todo: [], doing: [], done: [] };
+    currentBoard = name;
+    renderSidebarBoards();
+    renderBoard();
+    saveToLocalStorage();
+  }
+  cancelBoard();
+}
 
 // On load
 window.onload = () => {
   loadFromLocalStorage();
+  renderSidebarBoards();
   renderBoard();
+
   const savedTheme = localStorage.getItem("kanbanTheme");
   if (savedTheme) {
     document.body.classList.remove("light", "dark");

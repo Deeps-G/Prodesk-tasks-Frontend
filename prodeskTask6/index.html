@@ -10,12 +10,19 @@
   <div class="container">
     <aside class="sidebar">
       <h2>Kanban</h2>
-      <ul id="boardList">
-        <li class="board active" onclick="switchBoard('Platform Launch', event)">Platform Launch</li>
-        <li class="board" onclick="switchBoard('Marketing Plan', event)">Marketing Plan</li>
-        <li class="board" onclick="switchBoard('Roadmap', event)">Roadmap</li>
-      </ul>
-      <button class="mode-toggle" onclick="toggleMode()">SWITCH THEME</button>
+      <ul id="boardList"></ul>
+
+<div id="addBoardContainer" style="margin-top: 10px;">
+  <button class="mode-toggle" onclick="showBoardInput()">+ Add Board</button>
+  <div id="boardInputBox" style="margin-top: 8px; display: none;">
+    <input id="newBoardName" placeholder="Board name..." />
+    <button onclick="createBoard()">Create</button>
+    <button onclick="cancelBoard()">Cancel</button>
+  </div>
+</div>
+
+<button class="mode-toggle" onclick="toggleMode()">SWITCH THEME</button>
+
     </aside>
 
     <main class="main">
