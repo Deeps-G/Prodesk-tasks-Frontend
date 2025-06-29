@@ -15,7 +15,7 @@
         <li class="board" onclick="switchBoard('Marketing Plan', event)">Marketing Plan</li>
         <li class="board" onclick="switchBoard('Roadmap', event)">Roadmap</li>
       </ul>
-      <button class="mode-toggle" onclick="toggleMode()">Toggle Mode</button>
+      <button class="mode-toggle" onclick="toggleMode()">SWITCH THEME</button>
     </aside>
 
     <main class="main">
@@ -24,21 +24,18 @@
         <div class="column" id="todo">
           <h3>To Do</h3>
           <div class="task-list" id="todoTasks" ondragover="dragOver(event)" ondrop="dropTask(event, 'todo')"></div>
-
           <button class="add-task-btn" onclick="showInput('todo')">+ Add Task</button>
           <div class="task-input" id="todoInput"></div>
         </div>
         <div class="column" id="doing">
           <h3>Doing</h3>
-         <div class="task-list" id="doingTasks" ondragover="dragOver(event)" ondrop="dropTask(event, 'doing')"></div>
-
+          <div class="task-list" id="doingTasks" ondragover="dragOver(event)" ondrop="dropTask(event, 'doing')"></div>
           <button class="add-task-btn" onclick="showInput('doing')">+ Add Task</button>
           <div class="task-input" id="doingInput"></div>
         </div>
         <div class="column" id="done">
           <h3>Done</h3>
-         <div class="task-list" id="doneTasks" ondragover="dragOver(event)" ondrop="dropTask(event, 'done')"></div>
-
+          <div class="task-list" id="doneTasks" ondragover="dragOver(event)" ondrop="dropTask(event, 'done')"></div>
           <button class="add-task-btn" onclick="showInput('done')">+ Add Task</button>
           <div class="task-input" id="doneInput"></div>
         </div>
