@@ -12,6 +12,8 @@
       <h2>Kanban</h2>
       <ul id="boardList"></ul>
 
+<ul id="boardList"></ul>
+
 <div id="addBoardContainer" style="margin-top: 10px;">
   <button class="mode-toggle" onclick="showBoardInput()">+ Add Board</button>
   <div id="boardInputBox" style="margin-top: 8px; display: none;">
@@ -21,7 +23,14 @@
   </div>
 </div>
 
+<hr style="margin: 15px 0; border: none; border-top: 1px solid gray;" />
+
+<button class="mode-toggle" onclick="exportBoards()">Export Boards</button>
+<input type="file" id="importFile" style="display: none;" />
+<button class="mode-toggle" onclick="document.getElementById('importFile').click()">Import Boards</button>
+
 <button class="mode-toggle" onclick="toggleMode()">SWITCH THEME</button>
+
 
     </aside>
 

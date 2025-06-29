@@ -129,14 +129,34 @@ function renderSidebarBoards() {
 
   for (const name in boards) {
     const li = document.createElement("li");
-    li.textContent = name;
-    li.className = "board";
-    if (name === currentBoard) li.classList.add("active");
+    li.className = "board" + (name === currentBoard ? " active" : "");
 
-    li.onclick = (event) => switchBoard(name, event);
+    const label = document.createElement("span");
+    label.textContent = name;
+    label.style.cursor = "pointer";
+    label.onclick = () => switchBoard(name);
+
+    const delBtn = document.createElement("button");
+    delBtn.textContent = "✕";
+    delBtn.className = "delete-board";
+    delBtn.title = "Delete board";
+    delBtn.onclick = (e) => {
+      e.stopPropagation();
+      if (confirm(`Delete board "${name}"?`)) {
+        delete boards[name];
+        currentBoard = Object.keys(boards)[0] || "";
+        renderSidebarBoards();
+        renderBoard();
+        saveToLocalStorage();
+      }
+    };
+
+    li.appendChild(label);
+    li.appendChild(delBtn);
     boardList.appendChild(li);
   }
 }
+
 
 function switchBoard(boardName, event) {
   currentBoard = boardName;
@@ -171,6 +191,38 @@ function createBoard() {
   }
   cancelBoard();
 }
+function exportBoards() {
+  const blob = new Blob([JSON.stringify(boards)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "kanban-data.json";
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+document.getElementById("importFile").addEventListener("change", function () {
+  const file = this.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    try {
+      const imported = JSON.parse(e.target.result);
+      if (typeof imported === "object") {
+        boards = imported;
+        currentBoard = Object.keys(boards)[0];
+        saveToLocalStorage();
+        renderSidebarBoards();
+        renderBoard();
+      } else {
+        alert("Invalid file format.");
+      }
+    } catch {
+      alert("Error parsing file.");
+    }
+  };
+  reader.readAsText(file);
+});
 
 // On load
 window.onload = () => {
