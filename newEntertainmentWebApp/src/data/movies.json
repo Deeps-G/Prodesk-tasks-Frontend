@@ -1,0 +1,106 @@
+[
+  {
+    "title": "The Batman",
+    "thumbnail": "/images/Batman.jpg",
+    "year": "2022",
+    "category": "Movie",
+    "rating": "PG-13",
+    "isTrending": true
+  },
+   {
+    "title": "CTRL+",
+    "thumbnail": "/images/CTRL.jpg",
+    "year": "2022",
+    "category": "Movie",
+    "rating": "PG-13",
+    "isTrending": true
+  },
+  {
+    "title": "Squid Game",
+    "thumbnail": "/images/squidGame.jpg",
+    "year": "2021",
+    "category": "TV Series",
+    "rating": "PG-13",
+    "isTrending": true
+  },
+  {
+    "title": "The Flash",
+    "thumbnail": "/images/Theflash.jpg",
+    "year": "2023",
+    "category": "Movie",
+    "rating": "PG-13",
+    "isTrending": true
+  },
+    {
+        "title": "The Witcher",
+        "thumbnail": "/images/theWitcher.avif",
+        "year": "2021",
+        "category": "TV Series",
+        "rating": "18+",
+        "isTrending": true
+    },
+    {
+        "title": "Beyond Earth",
+        "thumbnail": "/images/BeyondEarth.jpg",
+        "year": "2019",
+        "category": "TV Series",
+        "rating": "16+",
+        "isTrending": true
+    },
+    {
+        "title": "Game of Thrones",
+        "thumbnail": "/images/GameOfThrones.jpg",
+        "year": "2018",
+        "category": "TV Series",
+        "rating": "18+",
+        "isTrending": true
+    },
+    {
+        "title": "Business Proposal",
+        "thumbnail": "/images/BusinessProposal.jpg",
+        "year": "2022",
+        "category": "TV Series",    
+        "rating": "16+",
+        "isTrending": false
+    },
+    {
+        "title": "Avengers: Endgame",
+        "thumbnail": "/images/avengers.jpg",
+        "year": "2019",
+        "category": "Movie",
+        "rating": "PG-13",
+        "isTrending": false
+    },
+    {
+    "title": "Emily In Paris",
+    "thumbnail": "/images/EmilyInParis.jpg",
+    "year": "2020",
+    "category": "TV Series",
+    "rating": "PG-16",
+    "isTrending": true
+  },
+    {
+        "title": "XO Kitty",
+        "thumbnail": "/images/XoKitty.jpg",
+        "year": "2023",
+        "category": "TV Series",
+        "rating": "PG-13",
+        "isTrending": false
+    },
+  {
+    "title": "Stranger Things",
+    "thumbnail": "/images/strangerThings.jpg",
+    "year": "2016",
+    "category": "TV Series",
+    "rating": "16+",
+    "isTrending": false
+  },
+  {
+    "title": "Inception",
+    "thumbnail": "/images/inception.jpg",
+    "year": "2010",
+    "category": "Movie",
+    "rating": "PG-13",
+    "isTrending": false
+  }
+]
